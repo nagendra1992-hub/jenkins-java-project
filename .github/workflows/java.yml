@@ -31,6 +31,11 @@ jobs:
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: |
           ${{ runner.os }}-m2
+     - name: Upload Artifact
+       uses: actions/upload-artifact@v4
+       with:
+        name: java-app
+        path: target/*.jar
 
     # Step 4: Build project
     - name: Build with Maven

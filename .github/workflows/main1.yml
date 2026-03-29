@@ -48,7 +48,7 @@ jobs:
       # 6) Optional: Upload build results (artifacts)
       - name: Upload jar artifact
         if: success()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build-artifact
           path: target/*.jar
